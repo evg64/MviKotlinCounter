@@ -2,6 +2,7 @@ package ru.chumak.mvikotlincounter.view
 
 import com.arkivanov.essenty.instancekeeper.InstanceKeeper
 import com.arkivanov.essenty.lifecycle.Lifecycle
+import com.arkivanov.essenty.lifecycle.doOnDestroy
 import com.arkivanov.mvikotlin.core.binder.BinderLifecycleMode
 import com.arkivanov.mvikotlin.core.instancekeeper.getStore
 import com.arkivanov.mvikotlin.core.store.StoreFactory
@@ -41,6 +42,7 @@ class CounterControllerImpl(
 
     init {
         initBindings()
+        lifecycle.doOnDestroy { store.dispose() }
     }
 
     private fun initBindings() {
