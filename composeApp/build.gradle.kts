@@ -53,6 +53,8 @@ kotlin {
         androidMain.dependencies {
             implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
+            // implementation(libs.essenty.statekeeper.android)
+            // implementation(libs.essenty.utils.internal.android)
             // MVI Kotlin
             implementation(libs.mvikotlin.core)
             implementation(libs.mvikotlin.main)
@@ -74,6 +76,8 @@ kotlin {
             implementation(libs.mvikotlin.main)
             implementation(libs.mvikotlin.extensions.coroutines)
             implementation(libs.mvikotlin.extensions.reaktive)
+            implementation(libs.essenty.lifecycle)
+            // implementation(libs.essenty.statekeeper)
             implementation(libs.mvikotlin.extensions.rx)
             implementation(libs.reaktive.reaktive)
             implementation(libs.reaktive.reaktiveAnnotations)
