@@ -12,6 +12,7 @@ import com.arkivanov.essenty.lifecycle.create
 import com.arkivanov.essenty.lifecycle.destroy
 import com.arkivanov.essenty.lifecycle.resume
 import com.arkivanov.essenty.lifecycle.stop
+import com.arkivanov.mvikotlin.logging.store.LoggingStoreFactory
 import com.arkivanov.mvikotlin.main.store.DefaultStoreFactory
 import ru.chumak.mvikotlincounter.instancekeeper.DesktopInstanceKeeper
 import ru.chumak.mvikotlincounter.view.CounterController
@@ -20,7 +21,7 @@ import ru.chumak.mvikotlincounter.view.CounterControllerImpl
 fun main() {
     val lifecycle = LifecycleRegistry()
     val controller = CounterControllerImpl(
-        storeFactory = DefaultStoreFactory(),
+        storeFactory = LoggingStoreFactory(DefaultStoreFactory()),
         lifecycle = lifecycle,
         instanceKeeper = DesktopInstanceKeeper(),
     )

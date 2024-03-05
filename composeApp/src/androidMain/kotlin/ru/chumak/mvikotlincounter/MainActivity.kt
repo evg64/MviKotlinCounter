@@ -9,6 +9,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.arkivanov.essenty.instancekeeper.instanceKeeper
 import com.arkivanov.essenty.lifecycle.essentyLifecycle
+import com.arkivanov.mvikotlin.logging.store.LoggingStoreFactory
 import com.arkivanov.mvikotlin.main.store.DefaultStoreFactory
 import ru.chumak.mvikotlincounter.view.CounterController
 import ru.chumak.mvikotlincounter.view.CounterControllerImpl
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         controller = CounterControllerImpl(
-            storeFactory = DefaultStoreFactory(),
+            storeFactory = LoggingStoreFactory(DefaultStoreFactory()),
             lifecycle = essentyLifecycle(),
             instanceKeeper = instanceKeeper(),
         )

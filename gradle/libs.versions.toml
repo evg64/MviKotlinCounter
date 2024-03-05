@@ -36,6 +36,8 @@ mvikotlin-main = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-main",ve
 mvikotlin-extensions-coroutines = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-extensions-coroutines", version.ref = "mvikotlin" }
 mvikotlin-extensions-reaktive = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-extensions-reaktive", version.ref = "mvikotlin" }
 mvikotlin-extensions-rx = { group = "com.arkivanov.mvikotlin", name = "rx", version.ref = "mvikotlin" }
+mvikotlin-logging = { group = "com.arkivanov.mvikotlin", name = "mvikotlin-logging", version.ref = "mvikotlin" }
+
 reaktive-reaktive = { group = "com.badoo.reaktive", name = "reaktive", version.ref = "reaktive" }
 reaktive-reaktiveAnnotations = { group = "com.badoo.reaktive", name = "reaktive-annotations", version.ref = "reaktive" }
 androidx-lifecycle-runtime-compose = { group ="androidx.lifecycle", name = "lifecycle-runtime-compose", version = "2.6.2" }
